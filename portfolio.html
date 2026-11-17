@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vedhati Akash — Web Developer & Data Analyst</title>
+<style>
+  :root{
+    --bg:#0f1115; --bg2:#161922; --fg:#e8eaf0; --muted:#9aa0ae;
+    --accent:#7ee787; --border:rgba(255,255,255,0.1); --radius:12px;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: dark){ :root{ --bg:#0f1115; --bg2:#161922; --fg:#e8eaf0; } }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top:env(safe-area-inset-top,0px);}
+  body{margin:0; background:var(--bg); color:var(--fg); font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);}
+  a{color:inherit;}
+  .wrap{max-width:900px; margin:0 auto; padding:0 20px;}
+  header{position:sticky; top:0; z-index:10; background:rgba(15,17,21,0.85); backdrop-filter:blur(8px); border-bottom:1px solid var(--border);}
+  header::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10;}
+  nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0;}
+  nav .logo{font-weight:700; color:var(--accent); font-family:monospace;}
+  nav .links{display:flex; gap:24px; font-size:14px; color:var(--muted);}
+  nav .links a:hover{color:var(--accent);}
+  section{padding:64px 0;}
+  h1{font-size:clamp(32px,6vw,56px); margin:0 0 8px;}
+  h2{font-size:28px; display:flex; align-items:center; gap:12px; margin-bottom:28px;}
+  h2 .num{color:var(--accent); font-family:monospace; font-size:16px;}
+  h2::after{content:""; flex:1; height:1px; background:var(--border);}
+  .tag{color:var(--accent); font-family:monospace; font-size:14px;}
+  .lead{color:var(--muted); font-size:18px; max-width:540px;}
+  .btn{display:inline-flex; align-items:center; gap:6px; background:var(--accent); color:#06290f; font-weight:600;
+    padding:12px 22px; border-radius:8px; text-decoration:none; border:none; cursor:pointer; font-size:15px;}
+  .btn.ghost{background:transparent; border:1px solid var(--accent); color:var(--accent);}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px;}
+  .about-grid{display:grid; grid-template-columns:3fr 2fr; gap:32px;}
+  .card{background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:20px;}
+  .skills{display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
+  .skills div{background:var(--bg2); border:1px solid var(--border); border-radius:8px; padding:14px; font-size:14px;}
+  .projects{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .proj{background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:20px; text-decoration:none; display:block;}
+  .proj:hover{border-color:var(--accent);}
+  .proj h3{margin:10px 0 6px;}
+  .proj p{color:var(--muted); font-size:14px; margin:0;}
+  .proj .lbl{font-family:monospace; color:var(--accent); font-size:13px;}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px;}
+  input,textarea{width:100%; padding:12px 14px; margin-bottom:12px; border-radius:8px; border:1px solid var(--border);
+    background:var(--bg); color:var(--fg); font-family:inherit; font-size:14px;}
+  footer{text-align:center; color:var(--muted); font-size:13px; padding:32px 0; border-top:1px solid var(--border);}
+  @media(max-width:700px){ .about-grid,.contact-grid,.projects,.skills{grid-template-columns:1fr;} nav .links{display:none;} }
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <span class="logo">&lt;VA/&gt;</span>
+  <div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+  <a class="btn ghost" href="#contact" style="padding:8px 16px;">Hire me</a>
+</nav></div></header>
+
+<div class="wrap">
+  <section>
+    <p class="tag">Hi, my name is</p>
+    <h1>Vedhati Akash.</h1>
+    <p class="lead">Web Developer &amp; Data Analyst — turning ideas into full-stack websites, backed by a data analyst's eye for detail.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#contact">Get in touch →</a>
+      <a class="btn ghost" href="https://github.com/akashvedhati" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/akash-vedhati-275350384" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2><span class="num">01.</span>About me</h2>
+    <div class="about-grid">
+      <div class="lead" style="font-size:16px;">
+        <p>I completed my B.Tech in Electronics &amp; Communication Engineering in 2025. My career started in data analytics — building reports and dashboards with Power BI, SQL and Excel.</p>
+        <p>Now I'm channelling that analytical mindset into freelance web development, building full-stack websites with databases, forms and live previews using modern AI-assisted workflows.</p>
+      </div>
+      <div class="card">
+        <p class="tag">Education</p>
+        <p><strong>B.Tech, ECE — 2025</strong><br><span style="color:var(--muted);font-size:14px;">Samskruti College of Engineering and Technology</span></p>
+        <p class="tag" style="margin-top:16px;">Certifications</p>
+        <p style="font-size:14px;"><strong>Python</strong> — AI For Techies<br><strong>Web Development</strong> — Elewayte<br><strong>Data Analyst</strong> — Cirameti</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2><span class="num">02.</span>Skills</h2>
+    <div class="skills">
+      <div>▹ Python</div><div>▹ SQL</div><div>▹ Power BI</div><div>▹ Excel</div>
+      <div>▹ HTML / CSS / JavaScript</div><div>▹ React</div><div>▹ Full-Stack Web Dev (AI-assisted)</div><div>▹ Data Analytics &amp; Dashboards</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2><span class="num">03.</span>Projects</h2>
+    <div class="projects">
+      <a class="proj" href="https://va-brew-and-co.lovable.app" target="_blank" rel="noreferrer">
+        <span class="lbl">Live site →</span>
+        <h3>VA Brew &amp; Co.</h3>
+        <p>A full-stack coffee shop website with a live database powering the menu, contact form and table reservations.</p>
+      </a>
+      <a class="proj" href="https://github.com/akashvedhati/Gym" target="_blank" rel="noreferrer">
+        <span class="lbl">GitHub repo →</span>
+        <h3>VA Fitness Studio</h3>
+        <p>A responsive gym website showcasing classes, trainers and memberships, built with HTML/CSS/JS.</p>
+      </a>
+      <div class="proj" style="text-align:center; border-style:dashed;">
+        <h3 style="margin-top:20px;">More projects coming soon</h3>
+        <p>Currently building — check back shortly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">04.</span>Get in touch</h2>
+    <div class="contact-grid">
+      <div>
+        <p class="lead" style="font-size:16px;">Have a website idea or need a dashboard? I'm open to freelance projects — send a message and I'll get back to you.</p>
+        <p style="margin-top:20px;">📧 <a href="mailto:akashvedhati@gmail.com">akashvedhati@gmail.com</a></p>
+        <p>💻 <a href="https://github.com/akashvedhati" target="_blank" rel="noreferrer">github.com/akashvedhati</a></p>
+        <p>🔗 <a href="https://www.linkedin.com/in/akash-vedhati-275350384" target="_blank" rel="noreferrer">LinkedIn</a></p>
+      </div>
+      <form class="card" action="https://formsubmit.co/akashvedhati@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from portfolio site">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input name="name" placeholder="Your name" maxlength="100" required>
+        <input name="email" type="email" placeholder="Your email" maxlength="255" required>
+        <textarea name="message" rows="4" placeholder="Tell me about your project" maxlength="2000" required></textarea>
+        <button class="btn" type="submit" style="width:100%;">Send message</button>
+      </form>
+    </div>
+  </section>
+</div>
+<footer>© 2026 Vedhati Akash</footer>
+
+
+</body>
+</html>
